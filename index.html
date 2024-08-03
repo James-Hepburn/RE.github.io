@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real Estate</title>
+  
+  <style>
+    body {
+      background-color: #9218;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .house {
+      width: 200px;
+      height: 300px;
+      background-color: hotpink;
+      padding: 10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-left: 20px;
+    }
+
+    .house img {
+      width: 200px;
+      height: 250px;
+      border: 2px hotpink solid;
+    }
+
+    .house button {
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      margin: 0 auto;
+    }
+
+    .all-houses {
+      display: flex;
+      align-items: center;
+    }
+
+    .house .back {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>REAL ESTATE</h1>
+
+  <div class = "all-houses">
+    <div class = "house">
+      <div class = "front" id = "front1">
+        <img src = "house_1.png" alt = "house 1">
+        <button onclick = "flipcard1 ()">flip</button>
+      </div>
+      
+      <div class = "back" id = "back1">
+        <h3> House 1 Information:</h3>
+        <h3> Number of bedrooms: 3</h3>
+        <h3> Number of bathrooms: 2</h3>
+        <h3> Area: 1500 sq. ft.</h3>
+        <button onclick = "flipcard1 ()">back</button>
+      </div>
+    </div>
+  
+    <div class = "house">
+      <div class = "front" id = "front2">
+        <img src = "house_2.png" alt = "house 2">
+        <button onclick = "flipcard2 ()">flip</button>
+      </div>
+      
+      <div class = "back" id = "back2">
+        <h3> House 2 Information:</h3>
+        <h3> Number of bedrooms: 1</h3>
+        <h3> Number of bathrooms: 9</h3>
+        <h3> Area: 2500 sq. ft.</h3>
+        <button onclick = "flipcard2 ()">back</button>
+      </div>
+    </div>
+    
+    <div class = "house">
+      <div class = "front" id = "front3">
+        <img src = "house_3.png" alt = "house 3">
+         <button onclick = "flipcard3 ()">flip</button>
+      </div>
+      
+      <div class = "back" id = "back3">
+        <h3> House 3 Information:</h3>
+        <h3> Number of bedrooms: 0</h3>
+        <h3> Number of bathrooms: 0</h3>
+        <h3> Area: 1 sq. ft.</h3>
+         <button onclick = "flipcard3 ()">back</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    var flip1 = true;
+
+    function flipcard1 () {
+      var front = document.getElementById("front1");
+      var back = document.getElementById("back1");
+       
+      if (flip1 == true){
+        front.style.display = "none";
+        back.style.display = "flex";
+        back.style.flexDirection = "column";
+        back.style.alignItems = "center";
+      }
+      if (flip1 == false){
+        front.style.display = "flex";
+        back.style.display = "none";
+        front.style.flexDirection = "column";
+        front.style.alignItems = "center";
+      }
+      
+      flip1 = ! flip1;
+    }
+
+
+    var flip2 = true;
+
+    function flipcard2 () {
+      var front = document.getElementById("front2");
+      var back = document.getElementById("back2");
+
+      if (flip2 == true){
+        front.style.display = "none";
+        back.style.display = "flex";
+        back.style.flexDirection = "column";
+        back.style.alignItems = "center";
+      }
+      if (flip2 == false){
+        front.style.display = "flex";
+        back.style.display = "none";
+        front.style.flexDirection = "column";
+        front.style.alignItems = "center";
+      }
+
+      flip2 = ! flip2;
+    }
+
+
+    var flip3 = true;
+
+    function flipcard3 () {
+      var front = document.getElementById("front3");
+      var back = document.getElementById("back3");
+
+      if (flip3 == true){
+        front.style.display = "none";
+        back.style.display = "flex";
+        back.style.flexDirection = "column";
+        back.style.alignItems = "center";
+      }
+      if (flip3 == false){
+        front.style.display = "flex";
+        back.style.display = "none";
+        front.style.flexDirection = "column";
+        front.style.alignItems = "center";
+      }
+
+      flip3 = ! flip3;
+    }
+
+  </script>
+  
+</body>
+
+</html>
